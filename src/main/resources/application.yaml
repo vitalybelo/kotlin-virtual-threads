@@ -1,12 +1,15 @@
 server:
   port: 8080
+  tomcat:
+    threads:
+      max: 10
 
 spring:
   application:
     name: kotlin-virtual-threads
   threads:
     virtual:
-      enabled: true
+      enabled: false
 
 
 

@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/virtual-threads")
 class VirtualThreadController {
 
-    @GetMapping("/demo")
+    @GetMapping("/enabled/demo")
     fun doWithDelay(): ResponseEntity<String> {
 
         Thread.sleep(1000L)
         val thread = Thread.currentThread().toString()
-        return ResponseEntity.ok("Success :: performed by thread = $thread")
+        return ResponseEntity.ok(">> ENABLED :: success :: performed by thread = $thread")
     }
 
 }
